@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com dados</title>
+    <style>
+        div{
+            font-family: sans-serif;
+            font-size: 20px;
+        }
+        h1{
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+        #button{
+            width: 170px;
+            height: 90px;
+            margin: auto;
+            border-radius: 6px;
+            font-family: sans-serif;
+            background-color: rgb(116, 198, 236);
+        }
+        #button:hover{
+            background-color: rgb(102, 184, 239);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados v2.0</h1>
+    <input type="button" id="button" value="Clique em mim!" onclick="clicar()">
+
+    <div id="res">
+        <p>Aqui vai aparecer o resultado</p>
+    </div>
+    <script>
+        function clicar(){
+            let nome = prompt('Qual é o seu nome?')
+            let result = document.getElementById('res')
+
+            result.innerHTML = `Olá, <strong>${nome}</strong>! É um prazer te conhecer!`
+        }
+    </script>
+</body>
+</html>
